@@ -1,0 +1,24 @@
+#
+
+APPPATH=/var/www/html/$(APPNAME)
+
+APPNAME_USERID:=snipeit
+
+APACHE_FILE:=$(APPNAME).conf
+
+
+ifeq ($(OS_NAME),debian)
+APPNAME_GROUPID:=www-data
+APACHE_PATH:=/etc/apache2/sites-available
+endif
+
+ifeq ($(OS_NAME),centos)
+APPNAME_GROUPID:=apache
+APACHE_PATH=/etc/httpd/conf.d
+endif
+
+
+# These allow developers to override the variable
+-include $(TOP)/../CONFIG_APPNAME.local
+-include $(TOP)/configure/CONFIG_APPNAME.local
+
