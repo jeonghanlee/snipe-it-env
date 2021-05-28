@@ -1,18 +1,18 @@
 
-APPNAME:=env-template
+APPNAME:=snipe-it
 
 ## Where the Source repository SRC_URL/SRC_NAME
 ##
-SRC_URL:=https://github.com/jeonghanlee
+SRC_URL:=https://github.com/snipe
 SRC_NAME:=${APPNAME}
 
 
 ## Which the source tag / branch / hash id would like to use
 ## 2020-04-21
-SRC_TAG:=master
+SRC_TAG:=tags/v5.1.5
 
 ## Placeholder for the site-specific version control 
-SRC_VERSION:=master
+SRC_VERSION:=5.1.5
 
 
 -include $(TOP)/../RELEASE.local
